@@ -1,0 +1,16 @@
+# Local Python and editor artefacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Never commit access credentials or private drafts
+.env
+.env.*
+*.pem
+*.key
+*token*secret*
