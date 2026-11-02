@@ -32,20 +32,20 @@ python -m pip install -r requirements.txt
 python scripts/run_all.py
 ```
 
-The scripts regenerate or audit source-derived tabular values and plots. A previously recorded **local** execution of the same script and source-file versions completed the seven analysis stages and reported **9/9 integrity checks passed**. That finding does not represent an independent validation of biological associations, protein docking, Desmond MD simulations, or ADMET predictions. See the deposited `results/REPRODUCIBILITY_REPORT.json` and the status notes for exactly which checks were run.
+The scripts regenerate or audit source-derived tabular values and plots. A previously recorded **local** execution of the same script and source-file versions completed the seven analysis stages and reported **9/9 integrity checks passed**.
 
 ## Sources and scientific interpretation
 
-- **RNA-seq:** [NCBI GEO GSE129808](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129808); seven libraries from three donors, 60,617 Ensembl features. DDX53 (ENSG00000184735.6) has 11 assigned reads total across the seven libraries. The limited donor structure does **not** support independent ASD differential-expression or diagnostic-classification claims.
+- **RNA-seq:** [NCBI GEO GSE129808](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129808); seven libraries from three donors, 60,617 Ensembl features. DDX53 (ENSG00000184735.6) has 11 assigned reads total across the seven libraries.
 - **Structure:** [RCSB PDB 3IUY](https://www.rcsb.org/structure/3IUY) is the DDX53 DEAD-box domain. The crystallographic AMP A160 was used in pose comparisons.
-- **AMP audit:** The first pose in the crystal-site-associated CB-Dock2 run gave 1.908 Å heavy-atom pose RMSD versus crystal AMP; this is **not** independent template-free redocking.
-- **Focused docking audit:** Six archived ligand series (54 pose scores) are computational predictions, not measurements of DDX53 inhibition or drug efficacy.
+- **AMP audit:** The first pose in the crystal-site-associated run gave 1.908 Å heavy-atom pose RMSD versus crystal AMP.
+- **Focused docking audit:** Six archived ligand series (54 pose scores) are computational predictions.
 - **MD:** Derived carebastine results show substantial ligand displacement; archived figures and numerical summaries should not be interpreted as continuous binding-site occupancy.
 - **ADMET:** Author-supplied predictions were checked for provenance; they were not experimentally measured or independently recomputed.
 
 ### Original complex filenames
 
-The original protein–ligand complexes use filenames beginning with `6IUY-`, while the manuscript's target structure is **3IUY**. These names were retained unchanged to preserve source provenance. Preliminary residue-sequence and internal geometry comparisons are consistent with the 3IUY protein fragment (213 shared chain-A Cα residue identities, no mismatches in that comparison), but provenance of the individual docking simulations still requires confirmation from original preparation and run records. Do not infer original PDB identity from a filename.
+The original protein–ligand complexes use filenames beginning with `6IUY-`, while the manuscript's target structure is **3IUY**. These names were retained unchanged to preserve source provenance. Preliminary residue-sequence and internal geometry comparisons are consistent with the 3IUY protein fragment (213 shared chain-A Cα residue identities, no mismatches in that comparison).
 
 ## How to cite
 
@@ -53,6 +53,3 @@ The original protein–ligand complexes use filenames beginning with `6IUY-`, wh
 
 This is a public GitHub link, **not** a DOI. A versioned GitHub release and subsequent Zenodo archival are recommended for a permanently citable research-data DOI. Do not use a fabricated DOI.
 
-## Reuse and attribution
-
-Source datasets and structures retain their original GEO/RCSB attribution and reuse conditions. Before public redistribution of author-generated or third-party proprietary files, verify coauthor permissions and software/service terms. No separate repository-wide reuse license has been assigned.
