@@ -1,0 +1,19 @@
+metric,value,unit,interpretation_or_basis
+production_duration,100,ns,simulated production interval in original Desmond log
+number_of_frames,1001,frames,frame0 + 1000 100ps frames
+temperature,300,K,original Desmond configuration
+pressure,1.01325,bar,original Desmond configuration
+water_model,TIP3P,model,original system builder
+force_field,OPLS-2005,forcefield,original system builder
+mean_protein_CA_RMSD,1.744,Angstrom,post-initial frames
+mean_ligand_protein_aligned_RMSD,10.817,Angstrom,post-initial frames; high displacement
+mean_ligand_self_aligned_RMSD,1.989,Angstrom,post-initial frames
+fraction_ligand_RMSD_gt_5A,0.975,fraction,protein aligned
+hydrogen_bond_frames,314,frames,of 1001
+hydrogen_bond_fraction,0.3137,fraction,presence of >=1 contact in a saved frame
+hydrophobic_frames,388,frames,of 1001
+hydrophobic_fraction,0.3876,fraction,presence of >=1 contact in a saved frame
+water_bridge_frames,417,frames,of 1001
+water_bridge_fraction,0.4166,fraction,presence of >=1 contact in a saved frame
+native_AMP_redocking,NOT_PERFORMED,,requires receptor-aligned re-docking and pocket validation
+experimentally_verified_binding,NOT_AVAILABLE,,docking & MD are not binding assays
