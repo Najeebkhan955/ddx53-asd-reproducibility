@@ -1,0 +1,52 @@
+{
+  "compound": "carebastine",
+  "source": "author-supplied S9 predictions",
+  "source_rows": 22,
+  "clinical_relevance_flags": [
+    {
+      "property": "P-gp substrate",
+      "reported_value": "Yes"
+    },
+    {
+      "property": "CYP1A2 inhibitor",
+      "reported_value": "Yes"
+    },
+    {
+      "property": "CYP2C19 inhibitor",
+      "reported_value": "Yes"
+    },
+    {
+      "property": "CYP2C9 inhibitor",
+      "reported_value": "No"
+    },
+    {
+      "property": "CYP2D6 inhibitor",
+      "reported_value": "Yes"
+    },
+    {
+      "property": "CYP3A4 inhibitor",
+      "reported_value": "Yes"
+    },
+    {
+      "property": "Blood-Brain Barrier (BBB)",
+      "reported_value": "BBB-"
+    },
+    {
+      "property": "AMES Toxicity",
+      "reported_value": "Non-AMES toxic"
+    },
+    {
+      "property": "Carcinogens",
+      "reported_value": "Non-carcinogens"
+    },
+    {
+      "property": "Acute Oral Toxicity",
+      "reported_value": "III"
+    }
+  ],
+  "independently_recomputed": false,
+  "caveats": [
+    "Original ADMET service outputs, version, prediction timestamps and input SMILES were not supplied.",
+    "Model scores are not measured pharmacokinetic endpoints."
+  ]
+}

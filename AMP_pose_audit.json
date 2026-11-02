@@ -1,0 +1,27 @@
+{
+  "reference": "AMP A160 from experimental PDB 3IUY Chain A",
+  "matched_heavy_atoms": 23,
+  "comparison": "Coordinate-frame RMSD without ligand superposition",
+  "run_summaries": [
+    {
+      "run": "Crystal-site custom / template caveat",
+      "reported_run_best_Vina_score_kcal_mol": -6.9,
+      "first_pose_RMSD_A": 1.908177687,
+      "lowest_RMSD_among_9_A": 0.393981461
+    },
+    {
+      "run": "Alternative pocket A",
+      "reported_run_best_Vina_score_kcal_mol": -6.1,
+      "first_pose_RMSD_A": 27.415984749,
+      "lowest_RMSD_among_9_A": 24.032594322
+    },
+    {
+      "run": "Alternative pocket B",
+      "reported_run_best_Vina_score_kcal_mol": -6.1,
+      "first_pose_RMSD_A": 34.114295386,
+      "lowest_RMSD_among_9_A": 32.681612945
+    }
+  ],
+  "warning": "Crystal-site run listed 3IUY as a CB-Dock2 template; the original crystal AMP was input. Not independent template-excluded redocking.",
+  "warning2": "Scores are the reported BEST PER RUN, not measured affinities and not per-pose scores for modes 2-9."
+}

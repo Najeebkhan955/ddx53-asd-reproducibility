@@ -1,0 +1,7 @@
+ligand,CID,num_poses,best_Vina_score_kcal_mol,worst_pose_score,archived_original_PDBQT_filename
+Carebastine,65820,9,-7.0,-6.0,65820_uff_E=439.37_out.pdbqt
+Talmapimod,9871074,9,-6.8,-5.5,9871074_uff_E=868.05_out.pdbqt
+Etoposide,36462,9,-6.6,-5.5,36462_uff_E=999.33_out.pdbqt
+Adapalene,60164,9,-6.2,-5.6,60164_uff_E=379.66_out.pdbqt
+Levomefolic acid,135398561,9,-6.1,-5.6,135398561_uff_E=366.61_out.pdbqt
+Flutemazepam,40344,9,-5.7,-4.8,40344_uff_E=397.92_out.pdbqt

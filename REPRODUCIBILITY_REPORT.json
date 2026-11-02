@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "original_GEO_TAR_SHA256_matches": true,
+    "generated_S3_SHA256_matches_original_verified_export": true,
+    "generated_S4_SHA256_matches_original_verified_export": true,
+    "S3_features_60617": true,
+    "S4_features_60617": true,
+    "AMP_27_poses": true,
+    "MD_1001_frames": true,
+    "S5_six_ligands_54_poses": true,
+    "six_ligand_summary": true
+  },
+  "passed": true,
+  "not_reproducible_from_current_inputs": {
+    "full_Desmond_MD_reproduction": "Requires original .cms/.dtr, system topology and logs, not provided.",
+    "ADMET_model_prediction_reproduction": "Requires original service inputs/output logs/model versions, not provided.",
+    "six_ligand_AutoDock_Vina_rerun": "Requires all original prepared receptor/ligand PDBQT, config, seeds and execution logs.",
+    "CB-Dock2_independent_redocking": "Template-matched AMP input used; original crystal AMP site is not prospectively blinded."
+  }
+}

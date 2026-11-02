@@ -1,0 +1,55 @@
+{
+  "source": "NCBI GEO GSE129808_RAW.tar",
+  "source_archive_SHA256": "80e0e539b87720065f81c378a7bb8a54557ee6abf8e850d185a171a8543918cd",
+  "features": 60617,
+  "libraries": [
+    "GSM3722366",
+    "GSM3722367",
+    "GSM3722368",
+    "GSM3722369",
+    "GSM3722370",
+    "GSM3722371",
+    "GSM3722372"
+  ],
+  "library_totals": [
+    26527292,
+    32372329,
+    30446579,
+    26074273,
+    28178774,
+    32341172,
+    29549672
+  ],
+  "detected_genes": [
+    40112,
+    35792,
+    36487,
+    30002,
+    31473,
+    31230,
+    41323
+  ],
+  "features_CPM_ge_1_in_2_libraries": 17061,
+  "DDX53_gene": "ENSG00000184735.6",
+  "DDX53_raw_counts": [
+    3,
+    1,
+    1,
+    1,
+    5,
+    0,
+    0
+  ],
+  "DDX53_CPM": [
+    0.11309107616412561,
+    0.0308905794204674,
+    0.03284441250361822,
+    0.038351980129992504,
+    0.17743852163334004,
+    0.0,
+    0.0
+  ],
+  "derived_S3_SHA256": "ba304790f68b7888da2f2f58e06ed02419994dfbbae0441690d4ee6f017ee963",
+  "derived_S4_SHA256": "97e49ab512d009a510f3a0984e8cd29314cf56441ffcf2bef332395a897aae2a",
+  "design_note": "7 libraries from 3 donors, one ASD donor; descriptive analysis only"
+}

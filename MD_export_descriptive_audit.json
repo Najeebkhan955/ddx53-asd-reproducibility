@@ -1,0 +1,42 @@
+{
+  "source": "single pre-existing archived Desmond export S6/S7/S8",
+  "number_of_frames": 1001,
+  "production_time_ns": 100.0,
+  "RMSD_summary_excludes_initial_frame": true,
+  "note": "This analysis does not simulate a system or establish equilibrium binding affinity.",
+  "protein_CA_RMSD": {
+    "mean_A": 1.7436190000000003,
+    "SD_population_A": 0.23555916844606156,
+    "range_min_A": 0.844,
+    "range_max_A": 2.297
+  },
+  "protein_backbone_RMSD": {
+    "mean_A": 1.948579,
+    "SD_population_A": 0.2784028336044732,
+    "range_min_A": 0.917,
+    "range_max_A": 2.558
+  },
+  "ligand_protein_aligned_RMSD": {
+    "mean_A": 10.816733000000001,
+    "SD_population_A": 1.7933549809535758,
+    "range_min_A": 1.885,
+    "range_max_A": 15.666
+  },
+  "ligand_self_aligned_RMSD": {
+    "mean_A": 1.98887,
+    "SD_population_A": 0.3098483582335075,
+    "range_min_A": 1.098,
+    "range_max_A": 2.701
+  },
+  "ligand_protein_aligned_RMSD_fraction_postinitial_over_5A": 0.975,
+  "fraction_frames_with_HBond": 0.31368631368631367,
+  "fraction_frames_with_Hydrophobic": 0.3876123876123876,
+  "fraction_frames_with_WaterBridge": 0.4165834165834166,
+  "fraction_frames_with_Ionic": 0.02097902097902098,
+  "fraction_frames_with_Pi-Cation": 0.06493506493506493,
+  "fraction_frames_with_Pi-Pi": 0.0,
+  "fraction_frames_with_Metal": 0.0,
+  "frames_with_any_contact": 794,
+  "contact_residue_rows": 54,
+  "S7_occupancy_rounding_disagreements": []
+}
