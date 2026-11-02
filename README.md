@@ -1,27 +1,58 @@
 # DDX53 in Autism Spectrum Disorder — Reproducibility Repository
 
-This repository organizes the available materials for an exploratory, donor-aware transcriptomic reassessment and source-derived docking, molecular-dynamics (MD), and ADMET analyses of DDX53 in ASD.
+**Public research repository** for the exploratory DDX53–ASD study, covering a descriptive reanalysis of GEO GSE129808 RNA-seq data, structure-informed AMP pose comparisons, archived six-ligand molecular docking results, Desmond molecular-dynamics (MD) export reanalysis, and author-supplied ADMET predictions.
 
-**Current state (2026-11-02):** The original GEO archive, crystal structure, AMP docking inputs, MD numeric exports, focused-docking and ADMET tables, complete S3/S4 matrices, S1–S11 workbook, and eight Python scripts are deposited. In a **local reconstructed copy using byte-identical deposited scripts and core source files**, all seven analysis stages ran successfully and **9/9 integrity checks passed**. These tests do not independently rerun the underlying MD/Vina/ADMET computations. See [REPOSITORY_STATUS.md](REPOSITORY_STATUS.md) for remaining figure and methodological caveats. No DOI has yet been assigned.
+> **Scope:** This repository provides source inputs, derived numerical data, figures and scripted reanalyses. It does **not** independently reproduce the original Vina docking jobs, a complete 100-ns Desmond simulation, or third-party ADMET model inference. AMP pose recovery used crystal-/template-associated inputs; it is **not** a blind, template-free redocking validation.
 
-## Source studies
+## Where to find the files
 
-- [NCBI GEO GSE129808](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129808) — original processed RNA-seq counts, seven libraries derived from three donors.
-- [RCSB 3IUY](https://www.rcsb.org/structure/3IUY) — experimental human DDX53 DEAD-box-domain structure.
-- Ross PJ et al. (2020). *Biological Psychiatry*. [doi:10.1016/j.biopsych.2019.07.014](https://doi.org/10.1016/j.biopsych.2019.07.014).
-
-## Organization
-
-| Folder | Contents |
+| Folder | Deposited contents |
 |---|---|
-| `scripts/` | 01–07 numerical analyses and `run_all.py` |
-| `results/` | Full 60,617-feature S3 raw counts and S4 descriptive CPM/log₂ values; archived quantitative summary outputs |
-| `data/derived/` | Supplementary workbook S1–S11 |
-| `data/docking_six/` | Uploaded six protein–ligand complex PDB files |
-| `data/md_exports/` | Archived MD report files, S6 1,001-frame values, S7 contact occupancies, and S8 settings |
-| `data/structure/` | Original PDB 3IUY, extracted AMP A160, prepared receptor and preparation log |
-| `figures/docking_six/` | Original uploaded ligand-interaction and LigPlot figures |
+| `data/original/` | Original GSE129808 HTSeq archive (`GSE129808_RAW.tar`) |
+| `data/structure/` | PDB 3IUY, extracted crystallographic AMP A160, prepared DDX53 receptor, preparation log |
+| `data/docking_amp/` | Three CB-Dock2 AMP runs (six pose/complex PDB exports) |
+| `data/docking_six/` | Six author-provided docked protein–ligand complexes (legacy filenames preserved) |
+| `data/md_exports/` | S6 (1,001-frame MD descriptors), S7 contacts, S8 settings, archived MD reports |
+| `data/other_exports/` | S1, S2, S5 (six ligands, 54 poses), S9 ADMET and S11 AMP comparison CSVs |
+| `data/derived/` | Supplementary S1–S11 Excel workbook |
+| `results/` | **Full 60,617-gene S3 raw-counts and S4 descriptive CPM matrices**, analysis JSON and CSV reports |
+| `scripts/` | `01`–`07` Python reanalysis/audit scripts and `run_all.py` |
+| `figures/docking_six/` | Twelve original ligand-interaction and LigPlot graphics |
+| `figures/md_original/` | Fourteen original MD plot PNGs from the author |
+| `figures/` | Three optional derived supplementary PNG exports are not yet deposited; some plots regenerate from scripts |
 
-Additional source folders: `data/original/` (GEO TAR), `data/docking_amp/` (three  AMP pose outputs), `data/other_exports/` (S1/S2/S5/S9/S11). These inputs have now been deposited at the paths expected by the scripts. Three optional supplementary figures (S1–S3) remain to be uploaded; the scripts can regenerate research plots.
+For a detailed inventory and limitations, see [REPOSITORY_STATUS.md](REPOSITORY_STATUS.md). For manuscript-ready wording, see [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md).
 
+## Run the deposited source-derived reanalyses
 
+Use Python 3.10+ and the committed source files:
+
+```bash
+python -m pip install -r requirements.txt
+python scripts/run_all.py
+```
+
+The scripts regenerate or audit source-derived tabular values and plots. A previously recorded **local** execution of the same script and source-file versions completed the seven analysis stages and reported **9/9 integrity checks passed**. That finding does not represent an independent validation of biological associations, protein docking, Desmond MD simulations, or ADMET predictions. See the deposited `results/REPRODUCIBILITY_REPORT.json` and the status notes for exactly which checks were run.
+
+## Sources and scientific interpretation
+
+- **RNA-seq:** [NCBI GEO GSE129808](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE129808); seven libraries from three donors, 60,617 Ensembl features. DDX53 (ENSG00000184735.6) has 11 assigned reads total across the seven libraries. The limited donor structure does **not** support independent ASD differential-expression or diagnostic-classification claims.
+- **Structure:** [RCSB PDB 3IUY](https://www.rcsb.org/structure/3IUY) is the DDX53 DEAD-box domain. The crystallographic AMP A160 was used in pose comparisons.
+- **AMP audit:** The first pose in the crystal-site-associated CB-Dock2 run gave 1.908 Å heavy-atom pose RMSD versus crystal AMP; this is **not** independent template-free redocking.
+- **Focused docking audit:** Six archived ligand series (54 pose scores) are computational predictions, not measurements of DDX53 inhibition or drug efficacy.
+- **MD:** Derived carebastine results show substantial ligand displacement; archived figures and numerical summaries should not be interpreted as continuous binding-site occupancy.
+- **ADMET:** Author-supplied predictions were checked for provenance; they were not experimentally measured or independently recomputed.
+
+### Original complex filenames
+
+The original protein–ligand complexes use filenames beginning with `6IUY-`, while the manuscript's target structure is **3IUY**. These names were retained unchanged to preserve source provenance. Preliminary residue-sequence and internal geometry comparisons are consistent with the 3IUY protein fragment (213 shared chain-A Cα residue identities, no mismatches in that comparison), but provenance of the individual docking simulations still requires confirmation from original preparation and run records. Do not infer original PDB identity from a filename.
+
+## How to cite
+
+**Manuscript data-availability link:** https://github.com/Najeebkhan955/ddx53-asd-reproducibility
+
+This is a public GitHub link, **not** a DOI. A versioned GitHub release and subsequent Zenodo archival are recommended for a permanently citable research-data DOI. Do not use a fabricated DOI.
+
+## Reuse and attribution
+
+Source datasets and structures retain their original GEO/RCSB attribution and reuse conditions. Before public redistribution of author-generated or third-party proprietary files, verify coauthor permissions and software/service terms. No separate repository-wide reuse license has been assigned.
