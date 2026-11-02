@@ -2,7 +2,7 @@
 
 This repository organizes the available materials for an exploratory, donor-aware transcriptomic reassessment and source-derived docking, molecular-dynamics (MD), and ADMET analyses of DDX53 in ASD.
 
-**Current state:** The complete S3/S4 matrices, S1–S11 workbook, all eight Python script files, archived docking-complex files, MD report exports and associated output tables are hosted here. Some original inputs required to **rerun all scripts from source** have not yet been deposited. See [REPOSITORY_STATUS.md](REPOSITORY_STATUS.md) for the exact checklist. No DOI has been assigned.
+**Current state (2026-11-02):** The original GEO archive, crystal structure, AMP docking inputs, MD numeric exports, focused-docking and ADMET tables, complete S3/S4 matrices, S1–S11 workbook, and eight Python scripts are deposited. In a **local reconstructed copy using byte-identical deposited scripts and core source files**, all seven analysis stages ran successfully and **9/9 integrity checks passed**. These tests do not independently rerun the underlying MD/Vina/ADMET computations. See [REPOSITORY_STATUS.md](REPOSITORY_STATUS.md) for remaining figure and methodological caveats. No DOI has yet been assigned.
 
 ## Source studies
 
@@ -18,11 +18,11 @@ This repository organizes the available materials for an exploratory, donor-awar
 | `results/` | Full 60,617-feature S3 raw counts and S4 descriptive CPM/log₂ values; archived quantitative summary outputs |
 | `data/derived/` | Supplementary workbook S1–S11 |
 | `data/docking_six/` | Uploaded six protein–ligand complex PDB files |
-| `data/md_exports/` | Uploaded carebastine–DDX53 MD/report files; original 1,001-frame S6 and S7 tables still need depositing |
-| `data/structure/` | Uploaded receptor-preparation log; original PDB 3IUY and extracted AMP reference still need depositing |
+| `data/md_exports/` | Archived MD report files, S6 1,001-frame values, S7 contact occupancies, and S8 settings |
+| `data/structure/` | Original PDB 3IUY, extracted AMP A160, prepared receptor and preparation log |
 | `figures/docking_six/` | Original uploaded ligand-interaction and LigPlot figures |
 
-Source folders to populate: `data/original/` (GEO TAR), `data/docking_amp/` (three CB-Dock2 AMP pose outputs), `data/other_exports/` (S5/S9 etc.). These paths are required by the scripts; see the status checklist before running them.
+Additional source folders: `data/original/` (GEO TAR), `data/docking_amp/` (three CB-Dock2 AMP pose outputs), `data/other_exports/` (S1/S2/S5/S9/S11). These inputs have now been deposited at the paths expected by the scripts. Three optional supplementary figures (S1–S3) remain to be uploaded; the scripts can regenerate research plots.
 
 **Note:** Some historical files are named `6IUY-...`, although the reported target is PDB **3IUY**. Original filenames were intentionally retained and their molecular identity/coordinates must be checked before citing them; a filename is not proof of receptor identity.
 
@@ -37,7 +37,7 @@ Source folders to populate: `data/original/` (GEO TAR), `data/docking_amp/` (thr
 
 ## Reproduction
 
-After depositing the original inputs listed in [REPOSITORY_STATUS.md](REPOSITORY_STATUS.md):
+With the deposited input files in place:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -46,7 +46,7 @@ python scripts/run_all.py
 
 The scripts regenerate or audit numerical outputs from source archives and exports. They do **not** rerun the original Desmond MD simulation, all six Vina docking jobs or the originating ADMET prediction service. Relevant project/trajectory, docking configuration and original service records are required to reproduce those software computations.
 
-S3 and S4 were checked against the corresponding prepared source-derived exports by their exact Git blob hashes, with no changes during repository reorganization. Supplementary data and scripts are provided for research traceability; all findings require appropriately qualified interpretation.
+S3 and S4 match the corresponding source-derived reference exports by Git blob hash, and all eight scripts and 18 newly deposited core source inputs match their locally prepared ZIP entries. The 2026-11-02 local source-derived execution completed with 9/9 integrity checks passing. This validates the scripted reanalysis workflow, **not independent laboratory or simulation validation** of the underlying biological or docking claims.
 
 ## License, authorship and permanent archive
 
