@@ -1,0 +1,8 @@
+GEO_accession,Sample,Group,Source_cell_type,Known_family_category,library_total_gene_counts,genes_with_nonzero_counts,DDX53_raw_counts,DDX53_CPM,Source_donor_ID,Independence_note
+GSM3722366,50B,Control,iPSCs,unrelated control,26527292,40112,3,0.1130910761641256,50B,unrelated unaffected donor
+GSM3722367,68E,Control,iPSCs,paternal control,32372329,35792,1,0.030890579420467395,68,"father of ASD-70, repeated source donor"
+GSM3722368,68H-i,Control,iPSCs,paternal control,30446579,36487,1,0.03284441250361822,68,"father of ASD-70, repeated source donor"
+GSM3722369,68H-ii,Control,iPSCs,paternal control,26074273,30002,1,0.038351980129992504,68,"father of ASD-70, repeated source donor"
+GSM3722370,70C,ASD,iPSCs,ASD subject,28178774,31473,5,0.17743852163334004,70,"affected ASD-70, repeated source donor"
+GSM3722371,70J-i,ASD,iPSCs,ASD subject,32341172,31230,0,0,70,"affected ASD-70, repeated source donor"
+GSM3722372,70J-ii,ASD,iPSCs,ASD subject,29549672,41323,0,0,70,"affected ASD-70, repeated source donor"

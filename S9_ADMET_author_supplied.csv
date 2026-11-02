@@ -1,0 +1,23 @@
+Category,Property,Reported_Value,Unit_or_Classification,Evidence_Status
+Water Solubility,Log S (ESOL),-4.86,-,Author-supplied model prediction; not recalculated
+Water Solubility,Log S (Ali),-4.73,-,Author-supplied model prediction; not recalculated
+Water Solubility,Log S (SILICOS-IT),-8.89,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,GI absorption,High,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,P-gp substrate,Yes,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,CYP1A2 inhibitor,Yes,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,CYP2C19 inhibitor,Yes,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,CYP2C9 inhibitor,No,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,CYP2D6 inhibitor,Yes,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,CYP3A4 inhibitor,Yes,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,Veber,No 1 violation,Rotors>10,Author-supplied model prediction; not recalculated
+Pharmacokinetics,Bioavailability Score,0.55,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,Molecular weight,499.64,g/mol,Author-supplied model prediction; not recalculated
+Pharmacokinetics,Num. rotatable bonds,11,-,Author-supplied model prediction; not recalculated
+Pharmacokinetics,TPSA,66.84,Å²,Author-supplied model prediction; not recalculated
+Pharmacokinetics,Consensus Log Po/w,4.73,-,Author-supplied model prediction; not recalculated
+ADMET Predicted Profile,Blood-Brain Barrier (BBB),BBB-,Probability: 0.6681,Author-supplied model prediction; not recalculated
+ADMET Predicted Profile,P-glycoprotein Substrate,Substrate,0.7863,Author-supplied model prediction; not recalculated
+ADMET Predicted Profile,P-glycoprotein Inhibitor,Inhibitor,0.7354,Author-supplied model prediction; not recalculated
+Excretion & Toxicity,AMES Toxicity,Non-AMES toxic,0.8736,Author-supplied model prediction; not recalculated
+Excretion & Toxicity,Carcinogens,Non-carcinogens,0.8852,Author-supplied model prediction; not recalculated
+Excretion & Toxicity,Acute Oral Toxicity,III,0.6681,Author-supplied model prediction; not recalculated
